@@ -1,0 +1,38 @@
+<%if @user.admin%>
+  <h2>ADMIN</h2>
+<%end%>
+
+<p id="notice"><%= notice %></p>
+<% if @message %>
+  <div class="center alert">
+    <p><%= @message %></p>
+  </div>
+<% end %>
+
+<div class="container" role="main">
+  <div class="center">
+    <div class="info">
+      <p>
+        <h2>Name:</h2>
+        <%=@user.name%>
+      </p>
+      <p>
+        <h2>Tickets:</h2>
+        <%=@user.tickets%>
+      </p>
+      <p>
+        <h2>Mood:</h2>
+        <%=@user.mood%>
+      </p>
+      <p>
+        <h2>Height:</h2>
+        <%=@user.height%>
+      </p>
+      <p><%=link_to "Edit", edit_user_path %></p>
+      <p><%=link_to "See attractions", attractions_path %></p>
+
+    </div>
+
+  </div>
+
+</div>
